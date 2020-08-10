@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/bootstrap-4.5.0-dist/css/bootstrap.css">
+    <title><%= title  %> </title>
+    <script>
+        alert("Enter! If you are admin...");
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <form class="needs-validation" action="/admin/login" method="post" novalidate>
+                <div>
+                    <label for="EMAIL">Email </label>
+                    <input aria-describedby="HELPEMAIL" type="email" name="EMAIL" class="form-control" id="EMAIL" placeholder="Email..." required>
+                    <div id="Email_ER"></div>
+                    <small class="form-text text-muted" id="HELPEMAIL">Enter your email</small>
+                </div>
+                <br>
+                <div>
+                    <label for="PASSWORD">PASSWORD</label>
+                    <input aria-describedby="HELPPASSWORD" name="PASSWORD" type="password" class="form-control" id="PASSWORD" placeholder="Password..." required>
+                    <div id="Password_ER"></div>
+                    <small class="form-text text-muted" id="HELPPASSWORD">Enter your password ~~ Admin ~~</small>
+                </div>
+                <br>
+                <div>
+                    <input id="NUMBER_OF_LOGIN_ATTEMPS" type="hidden" name="NUMBER_OF_LOGIN_ATTEMPS" value="1">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/login-admin.js"></script>
+</body>
+</html>

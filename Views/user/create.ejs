@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../general/head.ejs")  %> 
+</head>
+<body>
+    <div class="container">
+        <%- include("../general/navbar.ejs")  %>
+        <div class="h3">Create</div> 
+        <form class="needs-validation" action="/user/create" method="post" novalidate>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="FirstName">First Name</label>
+                    <input class="form-control" id="FirstName" name="FirstName" type="text" placeholder="First Name" required>
+                    <div id="FN"></div> <!--Valid-->
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="LastName">Last Name</label>
+                    <input class="form-control" id="LastName" name="LastName" type="text" placeholder="Last Name" required>
+                    <div id="LN"></div> <!--Valid-->
+                </div>
+            </div>
+            <div>
+                <label for="Email">Email</label>
+                <input class="form-control" id="Email" name="Email" placeholder="example@gmail.com" type="email" required>
+                <div id="EL"></div> <!--Valid-->
+            </div>
+            <br>
+            <div>
+                <label for="Password">Password</label>
+                <input aria-describedby="HelpPassword" class="form-control" id="Password" name="Password" placeholder="example" type="password" required>
+                <small id="HelpPassword" class="form-text text-muted">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                </small>
+                <div id="PW"></div><!--Valid-->
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="Avatar">Avatar</label>
+                    <input aria-describedby="HelpAvatar" class="form-control" id="Avatar" name="Avatar" placeholder="File" type="file">
+                    <small id="HelpAvatar" class="form-text text-muted">Please choose your avatar</small>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="BirthDay">Birthday</label>
+                    <input type="date" class="form-control" id="BirthDay" name="BirthDay" placeholder="Bitthday" required>
+                    <div id="BiD"></div><!--Valid-->
+                </div>
+            </div>
+            <div>
+                <label for="Job">Job</label>
+                <select class="custom-select my-1 my-sm-2" name="Job" id="Job" required>
+                    <option value="">Choose your Job</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Student">Student</option>
+                </select>
+                <div id="YJ"></div><!--Valid-->
+            </div>
+            <br>
+            <div id="Gender">
+                <input type="radio" name="gender" value="male" required>Male
+                <input type="radio" name="gender" value="female" required> Female
+                <div id="GD"></div><!--Valid-->
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="Description">Introduce</label>
+                <textarea aria-describedby="HelpIntroduce" class="form-control" placeholder="Please introduce..." name="introduce" id="Description" cols="30" rows="10" required></textarea>
+                <small class="form-text text-muted" id="HelpIntroduce">Introduce yourself</small>
+                <div id="Intro"></div><!--Valid-->
+            </div>
+            <input class="btn btn-primary" type="submit">
+        </form>
+    </div>
+    <script src="/lib/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/js/create.js"></script>
+</body>
+</html>
