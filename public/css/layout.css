@@ -1,3 +1,9 @@
+@import url("https://fonts.google.com/specimen/Dancing+Script");
+
+.navbar {
+    font-family : "Dancing Script";
+}
+
 .nav-link:hover {
     background-color: whitesmoke !important;
 }
